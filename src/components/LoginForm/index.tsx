@@ -1,26 +1,37 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Container, Form } from './styles';
 
 function initialState() {
-    return { user: '', password: ''};
+    return { user: '', password: '' };
 }
 
 const LoginForm: React.FC = () => {
-  return (
-  <Container>
-	<Form>
-		<span className="title">Login</span>
-		<input type='text' placeholder='Username'/>
-		<input type='password' placeholder='Password'/>
+    const [values, setValues] = useState(initialState);
 
-		<button>Let me in.</button>
+    function onChange(event: { target: { value: any; name: any; }; }) {
+        const { value, name } = event.target;
 
-		<span className='terms'>
-			Política de privacidade e aos Termos de serviço.
-		</span>
-	</Form>
-  </Container>
-);
+        setValues({
+            ...values,
+            [name]: value,
+        });
+    }
+
+    return (
+        <Container>
+            <Form>
+                <span className="title">Login</span>
+                <input type='text' placeholder='Username' name='user' onChange={onChange} value={values.user} />
+                <input type='password' placeholder='Password' name='password' onChange={onChange} value={values.password} />
+
+                <button>Let me in.</button>
+
+                <span className='terms'>
+                    Política de privacidade e aos Termos de serviço.
+                </span>
+            </Form>
+        </Container>
+    );
 }
 
 export default LoginForm;
