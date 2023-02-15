@@ -27,7 +27,7 @@ const LoginForm: React.FC = () => {
                 <button>Let me in.</button>
 
                 <span className='terms'>
-                    Política de privacidade e aos Termos de serviço.
+                    Política de Privacidade e aos Termos de Serviço.
                 </span>
             </Form>
         </Container>

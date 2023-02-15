@@ -3,7 +3,9 @@ import styled from 'styled-components';
 export const Container = styled.div`
   display: flex;
   flex-direction: column;
-  height: 100%;
+  text-align: center;
+  position: absolute;
+  width:100%;
 `;
 
 export const Form = styled.form`
@@ -11,8 +13,7 @@ export const Form = styled.form`
   width: 100%;
   flex-direction: column;
   justify-content: center;
-  padding: 0 100%;
-  max-width: 480px;
+  max-width: 700px;
   margin: 0 auto;
   > .title{
     display: flex;
