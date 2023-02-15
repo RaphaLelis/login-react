@@ -13,7 +13,7 @@ export const Form = styled.form`
   width: 100%;
   flex-direction: column;
   justify-content: center;
-  max-width: 700px;
+  max-width: 600px;
   margin: 0 auto;
   > .title{
     display: flex;
